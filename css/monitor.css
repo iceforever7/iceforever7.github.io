@@ -1,0 +1,80 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+h1 {
+    color: #444;
+    margin-bottom: 20px;
+}
+
+.dashboard {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 800px;
+}
+
+.card {
+    background: #ffffff3f;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    width: 200px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.card h2 {
+    margin: 0 0 10px;
+    font-size: 24px;
+    color: #555;
+}
+
+.card p {
+    margin: 0;
+    font-size: 18px;
+    color: #666;
+}
+
+footer {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #aaa;
+}
+
+/* 按钮样式 */
+.btn {
+    background-color: transparent;
+    color: #333; /* 文本颜色 */
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    padding: 15px 30px;
+    border-radius: 8px;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    display: block;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+
+    margin-top: 5%;
+    margin-left: 0;
+    width: 10%; /* 设置按钮宽度 */
+    height: 10%; /* 设置按钮高度 */
+
+}
+
+/* 鼠标悬停效果 */
+.btn:hover {
+  transform: translateY(-10px); /* 浮起 */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* 阴影 */
+  background-color: rgba(255, 255, 255, 0.3); /* 加强背景透明度 */
+}

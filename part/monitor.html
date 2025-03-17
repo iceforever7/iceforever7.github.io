@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>服务器状态</title>
+    <link rel="stylesheet" href="../css/monitor.css">
+</head>
+<body>
+    <h1>服务器状态</h1>
+    <div class="dashboard">
+        <div class="card">
+            <h2>CPU Usage</h2>
+            <p id="cpu-usage">--%</p>
+        </div>
+        <div class="card">
+            <h2>Memory Usage</h2>
+            <p id="memory-usage">--%</p>
+        </div>
+        <div class="card">
+            <h2>持续运行时间</h2>
+            <p id="uptime"></p>
+        </div>
+    </div>
+    <footer>
+        &copy; 2025 Server Monitoring Dashboard
+    </footer>
+    <button class="btn" onclick="window.location.href='https://iceforever7.click';">返回</button>
+    <script>
+        const ws = new WebSocket('wss://iceforever7.click');
+        ws.onopen = () => {
+            console.log('WebSocket connection established.');
+        };
+
+        ws.onmessage = (event) => {
+            const data = JSON.parse(event.data);
+            document.getElementById('cpu-usage').textContent = data.cpuUsage;
+            document.getElementById('memory-usage').textContent = data.memoryUsage;
+            document.getElementById('uptime').textContent = data.uptime;
+        };
+
+        ws.onclose = () => {
+            console.log('WebSocket connection closed.');
+        };
+
+        ws.onerror = (error) => {
+            console.error('WebSocket error:', error);
+        };
+    </script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/leftcon.css">
+    <link rel="stylesheet" href="font/iconfont.css">
+</head>
+<body>
+    <nav class="sidebar">
+        <ul class="nav-list">
+            <li class="nav-item active" id="logo">
+                <a href="#" class="nav-link">
+                    <span class="nav-icon">
+                        <span class="avatar">
+                            <img src="images/goat.jpg" alt="用户头像">
+                        </span>
+                    </span>
+                    <span class="nav-text">山羊の前端小窝</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#home" class="nav-link">
+                    <span class="nav-icon"><i class="iconfont icon-cangku"></i></span>
+                    <span class="nav-text">Home</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#theme" class="nav-link">
+                    <span class="nav-icon"><i class="iconfont icon-zhuti_tiaosepan"></i></span>
+                    <span class="nav-text">Theme</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#wallet" class="nav-link">
+                    <span class="nav-icon"><i class="iconfont icon-qianbao"></i></span>
+                    <span class="nav-text">Wallet</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#picture" class="nav-link">
+                    <span class="nav-icon"><i class="iconfont icon-tupian"></i></span>
+                    <span class="nav-text">Picture</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#code" class="nav-link">
+                    <span class="nav-icon"><i class="iconfont icon-erweima"></i></span>
+                    <span class="nav-text">QR Code</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#authentication" class="nav-link">
+                    <span class="nav-icon"><i class="iconfont icon-dunpaibaoxianrenzheng"></i></span>
+                    <span class="nav-text">Authentication</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#me" class="nav-link">
+                    <span class="nav-icon">
+                        <span class="avatar">
+                            <img src="images/goat.jpg" alt="用户头像">
+                        </span>
+                    </span>
+                    <span class="nav-text">ME</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="home">Home</section>
+        <section id="theme">Theme</section>
+        <section id="wallet">Wallet</section>
+        <section id="picture">Picture</section>
+        <section id="code">QR Code</section>
+        <section id="authentication">Authentication</section>
+        <section id="me">ME</section>
+    </main>
+
+    <script>
+        document.querySelectorAll('.nav-item').forEach(item => {
+            item.addEventListener('click', function() {
+                document.querySelector('.active')?.classList.remove('active');
+                this.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>
